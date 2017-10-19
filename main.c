@@ -36,13 +36,14 @@ int main(void)
     GPIO_enableInt(Board_BUTTON0);
     GPIO_setCallback(Board_BUTTON1, gpioButtonFxn1);
     GPIO_enableInt(Board_BUTTON1);
-
+    GPIO_write(MSP_EXP432P401R_P5_2, 1);
+    GPIO_write(MSP_EXP432P401R_P4_6, 1);
     // Switch on the LEDs
     //
-    GPIO_write(Board_LED0, Board_LED_ON);	// LH LED
-    GPIO_write(Board_LED1, Board_LED_ON);	// RH LED, Red
-    GPIO_write(Board_LED2, Board_LED_ON);	// RH LED, Green
-    GPIO_write(Board_LED3, Board_LED_ON);	// RH LED, Blue
+    //GPIO_write(Board_LED0, Board_LED_ON);	// LH LED
+    //GPIO_write(Board_LED1, Board_LED_ON);	// RH LED, Red
+    //GPIO_write(Board_LED2, Board_LED_ON);	// RH LED, Green
+    //GPIO_write(Board_LED3, Board_LED_ON);	// RH LED, Blue
 
     System_printf("Starting the example\nSystem provider is set to SysMin. "
                   "Halt the target to view any SysMin contents in ROV.\n");

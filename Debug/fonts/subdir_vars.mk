@@ -2,6 +2,8 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
+SHELL = cmd.exe
+
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../fonts/fontcm20b.c \
@@ -19,14 +21,14 @@ OBJS += \
 ./fonts/fontcm40b.obj 
 
 OBJS__QUOTED += \
-"fonts/fontcm20b.obj" \
-"fonts/fontcm30b.obj" \
-"fonts/fontcm40b.obj" 
+"fonts\fontcm20b.obj" \
+"fonts\fontcm30b.obj" \
+"fonts\fontcm40b.obj" 
 
 C_DEPS__QUOTED += \
-"fonts/fontcm20b.d" \
-"fonts/fontcm30b.d" \
-"fonts/fontcm40b.d" 
+"fonts\fontcm20b.d" \
+"fonts\fontcm30b.d" \
+"fonts\fontcm40b.d" 
 
 C_SRCS__QUOTED += \
 "../fonts/fontcm20b.c" \

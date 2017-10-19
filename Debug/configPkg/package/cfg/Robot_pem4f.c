@@ -1321,8 +1321,8 @@ __T1_ti_sysbios_knl_Task_Instance_State__stack ti_sysbios_knl_Task_Instance_Stat
 #endif
 #endif
 
-/* --> sensorTaskFxn */
-extern xdc_Void sensorTaskFxn(xdc_UArg,xdc_UArg);
+/* --> readRangeFxn */
+extern xdc_Void readRangeFxn(xdc_UArg,xdc_UArg);
 #ifdef __IAR_SYSTEMS_ICC__
     #pragma data_alignment=8
 #endif
@@ -1584,7 +1584,7 @@ typedef struct xdc_runtime_Text_Module_State__ {
 xdc_runtime_Text_Module_State__ xdc_runtime_Text_Module__state__V;
 
 /* --> xdc_runtime_Text_charTab__A */
-const __T1_xdc_runtime_Text_charTab xdc_runtime_Text_charTab__A[6207];
+const __T1_xdc_runtime_Text_charTab xdc_runtime_Text_charTab__A[6206];
 
 /* --> xdc_runtime_Text_nodeTab__A */
 const __T1_xdc_runtime_Text_nodeTab xdc_runtime_Text_nodeTab__A[44];
@@ -1633,7 +1633,7 @@ __FAR__ const xdc_SizeT ti_sysbios_knl_Task_Module_State_terminatedQ__O = offset
  *  Define absolute path prefix for this executable's
  *  configuration generated files.
  */
-xdc__META(__ASM__, "@(#)__ASM__ = /Users/AntonyHwang/Desktop/CSRobot_01_2017/Debug/configPkg/package/cfg/Robot_pem4f");
+xdc__META(__ASM__, "@(#)__ASM__ = C:/Users/jingwen/Desktop/MRes Robotics/GX02-Control/CSRobot_01_2017/Debug/configPkg/package/cfg/Robot_pem4f");
 
 /*
  *  ======== __ISA__ ========
@@ -5016,8 +5016,8 @@ ti_sysbios_knl_Task_Object__ ti_sysbios_knl_Task_Object__table__V[4] = {
         (xdc_SizeT)0x800,  /* stackSize */
         ((void*)ti_sysbios_knl_Task_Instance_State_2_stack__A),  /* stack */
         0,  /* stackHeap */
-        ((xdc_Void(*)(xdc_UArg,xdc_UArg))((xdc_Fxn)sensorTaskFxn)),  /* fxn */
-        ((xdc_UArg)(0x32)),  /* arg0 */
+        ((xdc_Void(*)(xdc_UArg,xdc_UArg))((xdc_Fxn)readRangeFxn)),  /* fxn */
+        ((xdc_UArg)(0x0)),  /* arg0 */
         ((xdc_UArg)(0x0)),  /* arg1 */
         ((xdc_Ptr)0),  /* env */
         ((void*)0),  /* hookEnv */
@@ -6755,7 +6755,7 @@ xdc_runtime_Text_Module_State__ xdc_runtime_Text_Module__state__V = {
 
 /* --> xdc_runtime_Text_charTab__A */
 #pragma DATA_SECTION(xdc_runtime_Text_charTab__A, ".const:xdc_runtime_Text_charTab__A");
-const __T1_xdc_runtime_Text_charTab xdc_runtime_Text_charTab__A[6207] = {
+const __T1_xdc_runtime_Text_charTab xdc_runtime_Text_charTab__A[6206] = {
     (xdc_Char)0x0,  /* [0] */
     (xdc_Char)0x41,  /* [1] */
     (xdc_Char)0x5f,  /* [2] */
@@ -12923,46 +12923,45 @@ const __T1_xdc_runtime_Text_charTab xdc_runtime_Text_charTab__A[6207] = {
     (xdc_Char)0x73,  /* [6164] */
     (xdc_Char)0x6b,  /* [6165] */
     (xdc_Char)0x0,  /* [6166] */
-    (xdc_Char)0x73,  /* [6167] */
-    (xdc_Char)0x65,  /* [6168] */
+    (xdc_Char)0x72,  /* [6167] */
+    (xdc_Char)0x61,  /* [6168] */
     (xdc_Char)0x6e,  /* [6169] */
-    (xdc_Char)0x73,  /* [6170] */
-    (xdc_Char)0x6f,  /* [6171] */
-    (xdc_Char)0x72,  /* [6172] */
-    (xdc_Char)0x54,  /* [6173] */
+    (xdc_Char)0x67,  /* [6170] */
+    (xdc_Char)0x65,  /* [6171] */
+    (xdc_Char)0x52,  /* [6172] */
+    (xdc_Char)0x65,  /* [6173] */
     (xdc_Char)0x61,  /* [6174] */
-    (xdc_Char)0x73,  /* [6175] */
-    (xdc_Char)0x6b,  /* [6176] */
-    (xdc_Char)0x0,  /* [6177] */
-    (xdc_Char)0x74,  /* [6178] */
-    (xdc_Char)0x69,  /* [6179] */
-    (xdc_Char)0x2e,  /* [6180] */
-    (xdc_Char)0x73,  /* [6181] */
-    (xdc_Char)0x79,  /* [6182] */
-    (xdc_Char)0x73,  /* [6183] */
-    (xdc_Char)0x62,  /* [6184] */
-    (xdc_Char)0x69,  /* [6185] */
-    (xdc_Char)0x6f,  /* [6186] */
-    (xdc_Char)0x73,  /* [6187] */
-    (xdc_Char)0x2e,  /* [6188] */
-    (xdc_Char)0x6b,  /* [6189] */
-    (xdc_Char)0x6e,  /* [6190] */
-    (xdc_Char)0x6c,  /* [6191] */
-    (xdc_Char)0x2e,  /* [6192] */
-    (xdc_Char)0x54,  /* [6193] */
-    (xdc_Char)0x61,  /* [6194] */
-    (xdc_Char)0x73,  /* [6195] */
-    (xdc_Char)0x6b,  /* [6196] */
-    (xdc_Char)0x2e,  /* [6197] */
-    (xdc_Char)0x49,  /* [6198] */
-    (xdc_Char)0x64,  /* [6199] */
-    (xdc_Char)0x6c,  /* [6200] */
-    (xdc_Char)0x65,  /* [6201] */
-    (xdc_Char)0x54,  /* [6202] */
-    (xdc_Char)0x61,  /* [6203] */
-    (xdc_Char)0x73,  /* [6204] */
-    (xdc_Char)0x6b,  /* [6205] */
-    (xdc_Char)0x0,  /* [6206] */
+    (xdc_Char)0x64,  /* [6175] */
+    (xdc_Char)0x0,  /* [6176] */
+    (xdc_Char)0x74,  /* [6177] */
+    (xdc_Char)0x69,  /* [6178] */
+    (xdc_Char)0x2e,  /* [6179] */
+    (xdc_Char)0x73,  /* [6180] */
+    (xdc_Char)0x79,  /* [6181] */
+    (xdc_Char)0x73,  /* [6182] */
+    (xdc_Char)0x62,  /* [6183] */
+    (xdc_Char)0x69,  /* [6184] */
+    (xdc_Char)0x6f,  /* [6185] */
+    (xdc_Char)0x73,  /* [6186] */
+    (xdc_Char)0x2e,  /* [6187] */
+    (xdc_Char)0x6b,  /* [6188] */
+    (xdc_Char)0x6e,  /* [6189] */
+    (xdc_Char)0x6c,  /* [6190] */
+    (xdc_Char)0x2e,  /* [6191] */
+    (xdc_Char)0x54,  /* [6192] */
+    (xdc_Char)0x61,  /* [6193] */
+    (xdc_Char)0x73,  /* [6194] */
+    (xdc_Char)0x6b,  /* [6195] */
+    (xdc_Char)0x2e,  /* [6196] */
+    (xdc_Char)0x49,  /* [6197] */
+    (xdc_Char)0x64,  /* [6198] */
+    (xdc_Char)0x6c,  /* [6199] */
+    (xdc_Char)0x65,  /* [6200] */
+    (xdc_Char)0x54,  /* [6201] */
+    (xdc_Char)0x61,  /* [6202] */
+    (xdc_Char)0x73,  /* [6203] */
+    (xdc_Char)0x6b,  /* [6204] */
+    (xdc_Char)0x0,  /* [6205] */
 };
 
 /* --> xdc_runtime_Text_nodeTab__A */
@@ -13244,7 +13243,7 @@ __FAR__ const CT__xdc_runtime_Text_nodeTab xdc_runtime_Text_nodeTab__C = ((CT__x
 
 /* charCnt__C */
 #pragma DATA_SECTION(xdc_runtime_Text_charCnt__C, ".const:xdc_runtime_Text_charCnt__C");
-__FAR__ const CT__xdc_runtime_Text_charCnt xdc_runtime_Text_charCnt__C = (xdc_Int16)0x183f;
+__FAR__ const CT__xdc_runtime_Text_charCnt xdc_runtime_Text_charCnt__C = (xdc_Int16)0x183e;
 
 /* nodeCnt__C */
 #pragma DATA_SECTION(xdc_runtime_Text_nodeCnt__C, ".const:xdc_runtime_Text_nodeCnt__C");
@@ -17212,5 +17211,5 @@ const ti_sysbios_knl_Task_Handle screenTask = (ti_sysbios_knl_Task_Handle)((ti_s
     __attribute__ ((externally_visible))
 #endif
 #endif
-const ti_sysbios_knl_Task_Handle sensorTask = (ti_sysbios_knl_Task_Handle)((ti_sysbios_knl_Task_Handle)&ti_sysbios_knl_Task_Object__table__V[2]);
+const ti_sysbios_knl_Task_Handle rangeRead = (ti_sysbios_knl_Task_Handle)((ti_sysbios_knl_Task_Handle)&ti_sysbios_knl_Task_Object__table__V[2]);
 

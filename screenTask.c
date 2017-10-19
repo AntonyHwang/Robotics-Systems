@@ -13,7 +13,8 @@
 /* Board Header files */
 #include "Sharp96x96.h"
 #include <stdio.h>
-#include "globalVar.h"
+
+uint8_t distR[4], distL[4];
 
 /*
  *  screenTaskFxn
@@ -29,6 +30,8 @@ void screenTaskFxn (UArg arg0, UArg arg1)
     const uint8_t RHS = 210;
     uint8_t y;
 
+
+
     Sharp96x96_LCDInit();
 
     Graphics_initContext(&g_sContext, &g_sharp96x96LCD);
@@ -42,17 +45,30 @@ void screenTaskFxn (UArg arg0, UArg arg1)
         Graphics_clearBuffer(&g_sContext);
     	y = 0;
 
-    	sprintf(test1_string,"MotorR = %4.1f", 23.2) ;
+    	sprintf(test1_string,"L1 = %d", distL[0]) ;
         Graphics_drawString(&g_sContext, test1_string, GRAPHICS_AUTO_STRING_LENGTH, LHS, y, GRAPHICS_TRANSPARENT_TEXT);
-    	sprintf(test2_string,"MotorL = %4.1f", 17.0) ;
+    	sprintf(test2_string,"R1 = %d", distR[0]) ;
 		Graphics_drawString(&g_sContext, test2_string, GRAPHICS_AUTO_STRING_LENGTH, RHS, y, GRAPHICS_TRANSPARENT_TEXT);
     	y += 20;
 
-    	sprintf(test1_string,"DistR = %6.1f", 45.5) ;
-        Graphics_drawString(&g_sContext, test1_string, GRAPHICS_AUTO_STRING_LENGTH, LHS, y, GRAPHICS_TRANSPARENT_TEXT);
-    	sprintf(test2_string,"DistL = %6.1f", 96.2) ;
-		Graphics_drawString(&g_sContext, test2_string, GRAPHICS_AUTO_STRING_LENGTH, RHS, y, GRAPHICS_TRANSPARENT_TEXT);
+    	sprintf(test1_string,"L2 = %d", distL[1]) ;
+    	Graphics_drawString(&g_sContext, test1_string, GRAPHICS_AUTO_STRING_LENGTH, LHS, y, GRAPHICS_TRANSPARENT_TEXT);
+        sprintf(test2_string,"R2 = %d", distR[1]) ;
+    	Graphics_drawString(&g_sContext, test2_string, GRAPHICS_AUTO_STRING_LENGTH, RHS, y, GRAPHICS_TRANSPARENT_TEXT);
     	y += 20;
+
+    	sprintf(test1_string,"L3 = %d", distL[2]) ;
+    	Graphics_drawString(&g_sContext, test1_string, GRAPHICS_AUTO_STRING_LENGTH, LHS, y, GRAPHICS_TRANSPARENT_TEXT);
+        sprintf(test2_string,"R3 = %d", distR[2]) ;
+        Graphics_drawString(&g_sContext, test2_string, GRAPHICS_AUTO_STRING_LENGTH, RHS, y, GRAPHICS_TRANSPARENT_TEXT);
+        y += 20;
+
+        sprintf(test1_string,"L4 = %d", distL[3]) ;
+        Graphics_drawString(&g_sContext, test1_string, GRAPHICS_AUTO_STRING_LENGTH, LHS, y, GRAPHICS_TRANSPARENT_TEXT);
+        sprintf(test2_string,"R4 = %d", distR[3]) ;
+        Graphics_drawString(&g_sContext, test2_string, GRAPHICS_AUTO_STRING_LENGTH, RHS, y, GRAPHICS_TRANSPARENT_TEXT);
+        y += 20;
+
 
 		Graphics_flushBuffer(&g_sContext);
     	Task_sleep((UInt)arg0);

@@ -2,6 +2,8 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
+SHELL = cmd.exe
+
 # Add inputs and outputs from these tool invocations to the build variables 
 ASM_SRCS += \
 ../LCDDriver/Sharp96x96utils.asm 
@@ -22,15 +24,15 @@ ASM_DEPS += \
 ./LCDDriver/Sharp96x96utils.d 
 
 OBJS__QUOTED += \
-"LCDDriver/Sharp96x96.obj" \
-"LCDDriver/Sharp96x96utils.obj" 
+"LCDDriver\Sharp96x96.obj" \
+"LCDDriver\Sharp96x96utils.obj" 
 
 C_DEPS__QUOTED += \
-"LCDDriver/Sharp96x96.d" \
-"LCDDriver/Sharp96x96utils.d" 
+"LCDDriver\Sharp96x96.d" \
+"LCDDriver\Sharp96x96utils.d" 
 
 ASM_DEPS__QUOTED += \
-"LCDDriver/Sharp96x96utils.d" 
+"LCDDriver\Sharp96x96utils.d" 
 
 C_SRCS__QUOTED += \
 "../LCDDriver/Sharp96x96.c" \

@@ -2,6 +2,8 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
+SHELL = cmd.exe
+
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../grlib/circle.c \
@@ -28,20 +30,20 @@ OBJS += \
 ./grlib/string.obj 
 
 OBJS__QUOTED += \
-"grlib/circle.obj" \
-"grlib/context.obj" \
-"grlib/image.obj" \
-"grlib/line.obj" \
-"grlib/rectangle.obj" \
-"grlib/string.obj" 
+"grlib\circle.obj" \
+"grlib\context.obj" \
+"grlib\image.obj" \
+"grlib\line.obj" \
+"grlib\rectangle.obj" \
+"grlib\string.obj" 
 
 C_DEPS__QUOTED += \
-"grlib/circle.d" \
-"grlib/context.d" \
-"grlib/image.d" \
-"grlib/line.d" \
-"grlib/rectangle.d" \
-"grlib/string.d" 
+"grlib\circle.d" \
+"grlib\context.d" \
+"grlib\image.d" \
+"grlib\line.d" \
+"grlib\rectangle.d" \
+"grlib\string.d" 
 
 C_SRCS__QUOTED += \
 "../grlib/circle.c" \
