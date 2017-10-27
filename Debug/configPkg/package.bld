@@ -11,7 +11,7 @@ var makeAssembly = false;
 var Executable = xdc.module('xdc.bld.Executable');
 
 var exeOpts = new Executable.Attrs({
-        cfgScript: 'C:/Users/jingwen/Desktop/MRes Robotics/GX02-Control/CSRobot_01_2017/Robot.cfg',
+        cfgScript: 'C:/Users/jingwen/Desktop/MRes Robotics/GX02-Control/robotic_systems/Robot.cfg',
         profile: 'release',
         cfgHome: 'configPkg',
 });
@@ -41,7 +41,7 @@ else {
 
 var thisObj = {
     cfg:        '../Robot.cfg',
-    outputPath: 'C:/Users/jingwen/Desktop/MRes Robotics/GX02-Control/CSRobot_01_2017/Debug/configPkg',
+    outputPath: 'C:/Users/jingwen/Desktop/MRes Robotics/GX02-Control/robotic_systems/Debug/configPkg',
     exeName:    'Robot' + suffix,
     exeIntName: 'Robot' + suffix.replace('.', '_'),
     targ:       targ,

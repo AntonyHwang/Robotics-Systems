@@ -1,14 +1,14 @@
 # FIXED
 
 LCDDriver/Sharp96x96.obj: ../LCDDriver/Sharp96x96.c
-LCDDriver/Sharp96x96.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/CSRobot_01_2017/LCDDriver/Sharp96x96.h
-LCDDriver/Sharp96x96.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/CSRobot_01_2017/grlib/grlib.h
+LCDDriver/Sharp96x96.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/LCDDriver/Sharp96x96.h
+LCDDriver/Sharp96x96.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/grlib/grlib.h
 LCDDriver/Sharp96x96.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdint.h
 LCDDriver/Sharp96x96.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdbool.h
 LCDDriver/Sharp96x96.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/assert.h
 LCDDriver/Sharp96x96.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/linkage.h
-LCDDriver/Sharp96x96.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/CSRobot_01_2017/LCDDriver/Sharp96x96utils.h
-LCDDriver/Sharp96x96.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/CSRobot_01_2017/grlib/grlib.h
+LCDDriver/Sharp96x96.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/LCDDriver/Sharp96x96utils.h
+LCDDriver/Sharp96x96.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/grlib/grlib.h
 LCDDriver/Sharp96x96.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/msp432_driverlib_3_21_00_05/driverlib/MSP432P4xx/driverlib.h
 LCDDriver/Sharp96x96.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/msp432_driverlib_3_21_00_05/driverlib/MSP432P4xx/adc14.h
 LCDDriver/Sharp96x96.obj: C:/ti/ccsv7/ccs_base/arm/include/msp.h
@@ -57,14 +57,14 @@ LCDDriver/Sharp96x96.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp4
 LCDDriver/Sharp96x96.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stddef.h
 
 ../LCDDriver/Sharp96x96.c: 
-C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/CSRobot_01_2017/LCDDriver/Sharp96x96.h: 
-C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/CSRobot_01_2017/grlib/grlib.h: 
+C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/LCDDriver/Sharp96x96.h: 
+C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/grlib/grlib.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdint.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdbool.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/assert.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/linkage.h: 
-C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/CSRobot_01_2017/LCDDriver/Sharp96x96utils.h: 
-C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/CSRobot_01_2017/grlib/grlib.h: 
+C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/LCDDriver/Sharp96x96utils.h: 
+C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/grlib/grlib.h: 
 C:/ti/tirtos_msp43x_2_20_00_06/products/msp432_driverlib_3_21_00_05/driverlib/MSP432P4xx/driverlib.h: 
 C:/ti/tirtos_msp43x_2_20_00_06/products/msp432_driverlib_3_21_00_05/driverlib/MSP432P4xx/adc14.h: 
 C:/ti/ccsv7/ccs_base/arm/include/msp.h: 

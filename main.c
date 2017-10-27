@@ -15,6 +15,8 @@
 /* Board Header files */
 #include "Board.h"
 #include "buttons.h"
+#include "motor.h"
+#include "robot.h"
 #include <stdio.h>
 
 /*
@@ -38,6 +40,14 @@ int main(void)
     GPIO_enableInt(Board_BUTTON1);
     GPIO_write(MSP_EXP432P401R_P5_2, 1);
     GPIO_write(MSP_EXP432P401R_P4_6, 1);
+    GPIO_write(MSP_EXP432P401R_P5_2, 1);
+    GPIO_write(MSP_EXP432P401R_P4_6, 1);
+    GPIO_write(MSP_EXP432P401R_P3_0, 1);//motor nsleep open
+
+    GPIO_setCallback(Robot_MotorRIN1f, RHMotorChannelAFallingFxn);
+    GPIO_enableInt(Robot_MotorRIN1f);
+    GPIO_setCallback(Robot_MotorLIN1f, LHMotorChannelAFallingFxn);
+    GPIO_enableInt(Robot_MotorLIN1f);
     // Switch on the LEDs
     //
     //GPIO_write(Board_LED0, Board_LED_ON);	// LH LED

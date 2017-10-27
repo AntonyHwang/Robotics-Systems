@@ -16,6 +16,9 @@ extern const ti_sysbios_knl_Task_Handle screenTask;
 #include <ti/sysbios/knl/Task.h>
 extern const ti_sysbios_knl_Task_Handle rangeRead;
 
+#include <ti/sysbios/knl/Task.h>
+extern const ti_sysbios_knl_Task_Handle motor;
+
 extern int xdc_runtime_Startup__EXECFXN__C;
 
 extern int xdc_runtime_Startup__RESETFXN__C;

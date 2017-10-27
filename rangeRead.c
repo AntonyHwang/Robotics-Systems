@@ -19,6 +19,9 @@
 
 #define sensor_addr 0x29
 
+uint8_t distR[4] = {255, 255, 255, 255};
+uint8_t distL[4] = {255, 255, 255, 255};
+
 void sensor_write(I2C_Handle handle, uint16_t reg_addr, uint8_t data){
     I2C_Transaction i2c_transaction;
     uint8_t writeBuffer[3];
@@ -114,7 +117,7 @@ void readResult(I2C_Handle handle, uint8_t *data) {
     switchOpen(handle, 0x01);
     sensor_write(handle, 0x0018, 0x01);
     while (sensor_read(handle, 0x004f) & 0x04 == 0)
-        Task_sleep(5);
+        Task_sleep(2);
     data[0] = sensor_read(handle, 0x0062);
     //System_printf("Data from channel %d: %d\n", channel, distance);
     sensor_write(handle, 0x0015, 0x07);
@@ -122,7 +125,7 @@ void readResult(I2C_Handle handle, uint8_t *data) {
     switchOpen(handle, 0x02);
     sensor_write(handle, 0x0018, 0x01);
     while (sensor_read(handle, 0x004f) & 0x04 == 0)
-        Task_sleep(5);
+        Task_sleep(2);
     data[1] = sensor_read(handle, 0x0062);
     //System_printf("Data from channel %d: %d\n", channel, distance);
     sensor_write(handle, 0x0015, 0x07);
@@ -130,7 +133,7 @@ void readResult(I2C_Handle handle, uint8_t *data) {
     switchOpen(handle, 0x04);
     sensor_write(handle, 0x0018, 0x01);
     while (sensor_read(handle, 0x004f) & 0x04 == 0)
-        Task_sleep(5);
+        Task_sleep(2);
     data[2] = sensor_read(handle, 0x0062);
     //System_printf("Data from channel %d: %d\n", channel, distance);
     sensor_write(handle, 0x0015, 0x07);
@@ -138,7 +141,7 @@ void readResult(I2C_Handle handle, uint8_t *data) {
     switchOpen(handle, 0x08);
     sensor_write(handle, 0x0018, 0x01);
     while (sensor_read(handle, 0x004f) & 0x04 == 0)
-        Task_sleep(5);
+        Task_sleep(2);
     data[3] = sensor_read(handle, 0x0062);
     //System_printf("Data from channel %d: %d\n", channel, distance);
     sensor_write(handle, 0x0015, 0x07);
@@ -148,7 +151,6 @@ Void readRangeFxn(UArg arg0, UArg arg1)
 {
     uint8_t i;
     uint8_t channel = 1;
-    extern uint8_t distR[4], distL[4];
     I2C_Handle i2cR, i2cL;
     I2C_Params i2cParamsR, i2cParamsL;
     I2C_Params_init(&i2cParamsR);
@@ -176,7 +178,7 @@ Void readRangeFxn(UArg arg0, UArg arg1)
     channel = 1;
 
     /* Take 20 samples and print them out onto the console */
-    for (i = 0; i < 300; i++) {
+    while (1) {
         /*switchOpen(i2cR, channel);
         sensor_write(i2cR, 0x0018, 0x01);
         while (sensor_read(i2cR, 0x004f) & 0x04 == 0)
@@ -202,6 +204,7 @@ Void readRangeFxn(UArg arg0, UArg arg1)
         readResult(i2cR, distR);
         readResult(i2cL, distL);
         System_flush();
+        Task_sleep(30);
     }
 
     /* Deinitialized I2C */

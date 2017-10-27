@@ -9,7 +9,7 @@ rangeRead.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/
 rangeRead.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/targets/std.h
 rangeRead.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdint.h
 rangeRead.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/cfg/global.h
-rangeRead.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/CSRobot_01_2017/Debug/configPkg/package/cfg/Robot_pem4f.h
+rangeRead.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/Debug/configPkg/package/cfg/Robot_pem4f.h
 rangeRead.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h
 rangeRead.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/xdc.h
 rangeRead.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
@@ -129,6 +129,7 @@ rangeRead.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/
 rangeRead.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/package/Task_SupportProxy.h
 rangeRead.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h
 rangeRead.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h
+rangeRead.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h
 rangeRead.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/System.h
 rangeRead.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
 rangeRead.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h
@@ -170,8 +171,8 @@ rangeRead.obj: ../buttons.h
 rangeRead.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdio.h
 rangeRead.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/linkage.h
 rangeRead.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdarg.h
-rangeRead.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/CSRobot_01_2017/LCDDriver/Sharp96x96.h
-rangeRead.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/CSRobot_01_2017/grlib/grlib.h
+rangeRead.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/LCDDriver/Sharp96x96.h
+rangeRead.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/grlib/grlib.h
 rangeRead.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/assert.h
 
 ../rangeRead.c: 
@@ -183,7 +184,7 @@ C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/targets/arm/
 C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/targets/std.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdint.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/cfg/global.h: 
-C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/CSRobot_01_2017/Debug/configPkg/package/cfg/Robot_pem4f.h: 
+C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/Debug/configPkg/package/cfg/Robot_pem4f.h: 
 C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/xdc.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
@@ -303,6 +304,7 @@ C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/
 C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/package/Task_SupportProxy.h: 
 C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h: 
 C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h: 
+C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/System.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h: 
@@ -344,6 +346,6 @@ C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stddef.h:
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdio.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/linkage.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdarg.h: 
-C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/CSRobot_01_2017/LCDDriver/Sharp96x96.h: 
-C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/CSRobot_01_2017/grlib/grlib.h: 
+C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/LCDDriver/Sharp96x96.h: 
+C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/grlib/grlib.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/assert.h: 

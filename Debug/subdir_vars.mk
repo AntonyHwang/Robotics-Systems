@@ -16,6 +16,7 @@ C_SRCS += \
 ../buttons.c \
 ../heartBeatTask.c \
 ../main.c \
+../motor.c \
 ../rangeRead.c \
 ../screenTask.c 
 
@@ -34,6 +35,7 @@ C_DEPS += \
 ./buttons.d \
 ./heartBeatTask.d \
 ./main.d \
+./motor.d \
 ./rangeRead.d \
 ./screenTask.d 
 
@@ -45,6 +47,7 @@ OBJS += \
 ./buttons.obj \
 ./heartBeatTask.obj \
 ./main.obj \
+./motor.obj \
 ./rangeRead.obj \
 ./screenTask.obj 
 
@@ -56,6 +59,7 @@ OBJS__QUOTED += \
 "buttons.obj" \
 "heartBeatTask.obj" \
 "main.obj" \
+"motor.obj" \
 "rangeRead.obj" \
 "screenTask.obj" 
 
@@ -64,6 +68,7 @@ C_DEPS__QUOTED += \
 "buttons.d" \
 "heartBeatTask.d" \
 "main.d" \
+"motor.d" \
 "rangeRead.d" \
 "screenTask.d" 
 
@@ -76,6 +81,7 @@ C_SRCS__QUOTED += \
 "../buttons.c" \
 "../heartBeatTask.c" \
 "../main.c" \
+"../motor.c" \
 "../rangeRead.c" \
 "../screenTask.c" 
 

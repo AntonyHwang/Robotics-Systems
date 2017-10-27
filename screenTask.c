@@ -14,7 +14,8 @@
 #include "Sharp96x96.h"
 #include <stdio.h>
 
-uint8_t distR[4], distL[4];
+extern uint8_t distR[4], distL[4];
+extern float speedR, speedL;
 
 /*
  *  screenTaskFxn
@@ -69,6 +70,14 @@ void screenTaskFxn (UArg arg0, UArg arg1)
         Graphics_drawString(&g_sContext, test2_string, GRAPHICS_AUTO_STRING_LENGTH, RHS, y, GRAPHICS_TRANSPARENT_TEXT);
         y += 20;
 
+        sprintf(test1_string,"Speed R = %f", speedR) ;
+        Graphics_drawString(&g_sContext, test1_string, GRAPHICS_AUTO_STRING_LENGTH, LHS, y, GRAPHICS_TRANSPARENT_TEXT);
+        //sprintf(test2_string,"R4 = %d", distR[3]) ;
+        //Graphics_drawString(&g_sContext, test2_string, GRAPHICS_AUTO_STRING_LENGTH, RHS, y, GRAPHICS_TRANSPARENT_TEXT);
+        y += 20;
+
+        sprintf(test1_string,"Speed L = %f", speedL) ;
+        Graphics_drawString(&g_sContext, test1_string, GRAPHICS_AUTO_STRING_LENGTH, LHS, y, GRAPHICS_TRANSPARENT_TEXT);
 
 		Graphics_flushBuffer(&g_sContext);
     	Task_sleep((UInt)arg0);
