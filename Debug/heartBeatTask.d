@@ -9,7 +9,7 @@ heartBeatTask.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packa
 heartBeatTask.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/targets/std.h
 heartBeatTask.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdint.h
 heartBeatTask.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/cfg/global.h
-heartBeatTask.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/Debug/configPkg/package/cfg/Robot_pem4f.h
+heartBeatTask.obj: C:/Users/Jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/Debug/configPkg/package/cfg/Robot_pem4f.h
 heartBeatTask.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h
 heartBeatTask.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/xdc.h
 heartBeatTask.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
@@ -129,7 +129,6 @@ heartBeatTask.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packa
 heartBeatTask.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/package/Task_SupportProxy.h
 heartBeatTask.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h
 heartBeatTask.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h
-heartBeatTask.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h
 heartBeatTask.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/System.h
 heartBeatTask.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
 heartBeatTask.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h
@@ -147,8 +146,8 @@ heartBeatTask.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance
 heartBeatTask.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IGateProvider.h
 heartBeatTask.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/package/System_SupportProxy.h
 heartBeatTask.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/package/System_Module_GateProxy.h
-heartBeatTask.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/LCDDriver/Sharp96x96.h
-heartBeatTask.obj: C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/grlib/grlib.h
+heartBeatTask.obj: C:/Users/Jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/LCDDriver/Sharp96x96.h
+heartBeatTask.obj: C:/Users/Jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/grlib/grlib.h
 heartBeatTask.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdbool.h
 heartBeatTask.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/assert.h
 heartBeatTask.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/linkage.h
@@ -162,7 +161,7 @@ C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/targets/arm/
 C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/targets/std.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdint.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/cfg/global.h: 
-C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/Debug/configPkg/package/cfg/Robot_pem4f.h: 
+C:/Users/Jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/Debug/configPkg/package/cfg/Robot_pem4f.h: 
 C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/xdc.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
@@ -282,7 +281,6 @@ C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/
 C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/package/Task_SupportProxy.h: 
 C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h: 
 C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h: 
-C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/System.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h: 
@@ -300,8 +298,8 @@ C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IInstance.h:
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IGateProvider.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/package/System_SupportProxy.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/package/System_Module_GateProxy.h: 
-C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/LCDDriver/Sharp96x96.h: 
-C:/Users/jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/grlib/grlib.h: 
+C:/Users/Jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/LCDDriver/Sharp96x96.h: 
+C:/Users/Jingwen/Desktop/MRes\ Robotics/GX02-Control/robotic_systems/grlib/grlib.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdbool.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/assert.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/linkage.h: 

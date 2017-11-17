@@ -11,9 +11,6 @@
 extern const ti_sysbios_knl_Task_Handle heartBeatTask;
 
 #include <ti/sysbios/knl/Task.h>
-extern const ti_sysbios_knl_Task_Handle screenTask;
-
-#include <ti/sysbios/knl/Task.h>
 extern const ti_sysbios_knl_Task_Handle rangeRead;
 
 #include <ti/sysbios/knl/Task.h>

@@ -18,7 +18,8 @@ C_SRCS += \
 ../main.c \
 ../motor.c \
 ../rangeRead.c \
-../screenTask.c 
+../screenTask.c \
+../wallFollower.c 
 
 GEN_CMDS += \
 ./configPkg/linker.cmd 
@@ -37,7 +38,8 @@ C_DEPS += \
 ./main.d \
 ./motor.d \
 ./rangeRead.d \
-./screenTask.d 
+./screenTask.d \
+./wallFollower.d 
 
 GEN_OPTS += \
 ./configPkg/compiler.opt 
@@ -49,7 +51,8 @@ OBJS += \
 ./main.obj \
 ./motor.obj \
 ./rangeRead.obj \
-./screenTask.obj 
+./screenTask.obj \
+./wallFollower.obj 
 
 GEN_MISC_DIRS__QUOTED += \
 "configPkg\" 
@@ -61,7 +64,8 @@ OBJS__QUOTED += \
 "main.obj" \
 "motor.obj" \
 "rangeRead.obj" \
-"screenTask.obj" 
+"screenTask.obj" \
+"wallFollower.obj" 
 
 C_DEPS__QUOTED += \
 "MSP_EXP432P401R.d" \
@@ -70,7 +74,8 @@ C_DEPS__QUOTED += \
 "main.d" \
 "motor.d" \
 "rangeRead.d" \
-"screenTask.d" 
+"screenTask.d" \
+"wallFollower.d" 
 
 GEN_FILES__QUOTED += \
 "configPkg\linker.cmd" \
@@ -83,6 +88,7 @@ C_SRCS__QUOTED += \
 "../main.c" \
 "../motor.c" \
 "../rangeRead.c" \
-"../screenTask.c" 
+"../screenTask.c" \
+"../wallFollower.c" 
 
 

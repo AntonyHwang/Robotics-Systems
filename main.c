@@ -62,6 +62,7 @@ int main(void)
 
     /* Start BIOS */
     BIOS_start();
+    Task_sleep(2000);
 
     return (0);
 }

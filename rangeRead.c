@@ -21,6 +21,8 @@
 
 uint8_t distR[4] = {255, 255, 255, 255};
 uint8_t distL[4] = {255, 255, 255, 255};
+int dataR[4][3] = {{255, 255, 255},{255, 255, 255},{255,255,255},{255,255,255}};
+int dataL[4][3] = {{255, 255, 255},{255, 255, 255},{255,255,255},{255,255,255}};
 
 void sensor_write(I2C_Handle handle, uint16_t reg_addr, uint8_t data){
     I2C_Transaction i2c_transaction;
@@ -147,6 +149,23 @@ void readResult(I2C_Handle handle, uint8_t *data) {
     sensor_write(handle, 0x0015, 0x07);
 }
 
+void filter() {
+    int i;
+    for (i=0; i<4; i++) {
+        dataR[i][2] = dataR[i][1];
+        dataR[i][1] = dataR[i][0];
+        dataR[i][0] = distR[i];
+
+        dataL[i][2] = dataL[i][1];
+        dataL[i][1] = dataL[i][0];
+        dataL[i][0] = distL[i];
+    }
+    for (i=1; i<4; i++) {
+        distR[i] = (int) (0.5 * dataR[i][0] + 0.3 * dataR[i][1] + 0.2 * dataR[i][2]);
+        distL[i] = (int) (0.5 * dataL[i][0] + 0.3 * dataL[i][1] + 0.2 * dataL[i][2]);
+    }
+}
+
 Void readRangeFxn(UArg arg0, UArg arg1)
 {
     uint8_t i;
@@ -179,32 +198,12 @@ Void readRangeFxn(UArg arg0, UArg arg1)
 
     /* Take 20 samples and print them out onto the console */
     while (1) {
-        /*switchOpen(i2cR, channel);
-        sensor_write(i2cR, 0x0018, 0x01);
-        while (sensor_read(i2cR, 0x004f) & 0x04 == 0)
-            Task_sleep(5);
-        distR = sensor_read(i2cR, 0x0062);
-        //System_printf("Right channel %d: %d\n", channel, distR);
-        sensor_write(i2cR, 0x0015, 0x07);
-
-        switchOpen(i2cL, channel);
-        sensor_write(i2cL, 0x0018, 0x01);
-        while (sensor_read(i2cL, 0x004f) & 0x04 == 0)
-            Task_sleep(5);
-        distL = sensor_read(i2cL, 0x0062);
-        //System_printf("Left channel %d: %d\n", channel, distL);
-        sensor_write(i2cL, 0x0015, 0x07);
-
-        if (channel != 0x08) {
-            channel = channel << 1;
-        }
-        else {
-            channel = 0x01;
-        }*/
         readResult(i2cR, distR);
         readResult(i2cL, distL);
+        filter();
+        //System_printf("%d\t%d\n", distR[0], distR[3]);
         System_flush();
-        Task_sleep(30);
+        Task_sleep(50);
     }
 
     /* Deinitialized I2C */

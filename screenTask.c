@@ -15,7 +15,11 @@
 #include <stdio.h>
 
 extern uint8_t distR[4], distL[4];
+extern float PID_val;
+extern float integ;
 extern float speedR, speedL;
+extern float errR, errL, integR, integL;
+extern float setPointR, setPointL;
 
 /*
  *  screenTaskFxn
@@ -30,8 +34,6 @@ void screenTaskFxn (UArg arg0, UArg arg1)
     const uint8_t LHS =  10;
     const uint8_t RHS = 210;
     uint8_t y;
-
-
 
     Sharp96x96_LCDInit();
 
@@ -70,16 +72,32 @@ void screenTaskFxn (UArg arg0, UArg arg1)
         Graphics_drawString(&g_sContext, test2_string, GRAPHICS_AUTO_STRING_LENGTH, RHS, y, GRAPHICS_TRANSPARENT_TEXT);
         y += 20;
 
-        sprintf(test1_string,"Speed R = %f", speedR) ;
+        sprintf(test1_string,"Speed R = %.4f", speedR) ;
         Graphics_drawString(&g_sContext, test1_string, GRAPHICS_AUTO_STRING_LENGTH, LHS, y, GRAPHICS_TRANSPARENT_TEXT);
-        //sprintf(test2_string,"R4 = %d", distR[3]) ;
-        //Graphics_drawString(&g_sContext, test2_string, GRAPHICS_AUTO_STRING_LENGTH, RHS, y, GRAPHICS_TRANSPARENT_TEXT);
+        sprintf(test2_string,"Speed L = %.4f", speedL) ;
+        Graphics_drawString(&g_sContext, test2_string, GRAPHICS_AUTO_STRING_LENGTH, RHS, y, GRAPHICS_TRANSPARENT_TEXT);
         y += 20;
 
-        sprintf(test1_string,"Speed L = %f", speedL) ;
+        sprintf(test1_string,"setpoint R = %.4f", setPointR) ;
         Graphics_drawString(&g_sContext, test1_string, GRAPHICS_AUTO_STRING_LENGTH, LHS, y, GRAPHICS_TRANSPARENT_TEXT);
+        sprintf(test1_string,"setpoint L = %.4f", setPointL) ;
+        Graphics_drawString(&g_sContext, test1_string, GRAPHICS_AUTO_STRING_LENGTH, RHS, y, GRAPHICS_TRANSPARENT_TEXT);
+		y += 20;
 
-		Graphics_flushBuffer(&g_sContext);
+		sprintf(test1_string,"errR = %.4f", errR) ;
+		Graphics_drawString(&g_sContext, test1_string, GRAPHICS_AUTO_STRING_LENGTH, LHS, y, GRAPHICS_TRANSPARENT_TEXT);
+		sprintf(test2_string,"errL = %.4f", errL) ;
+		Graphics_drawString(&g_sContext, test2_string, GRAPHICS_AUTO_STRING_LENGTH, RHS, y, GRAPHICS_TRANSPARENT_TEXT);
+		y += 20;
+
+		sprintf(test1_string,"integ = %.4f", integ) ;
+		Graphics_drawString(&g_sContext, test1_string, GRAPHICS_AUTO_STRING_LENGTH, LHS, y, GRAPHICS_TRANSPARENT_TEXT);
+		sprintf(test2_string,"PID = %.4f", PID_val) ;
+		Graphics_drawString(&g_sContext, test2_string, GRAPHICS_AUTO_STRING_LENGTH, RHS, y, GRAPHICS_TRANSPARENT_TEXT);
+		y += 20;
+
+        Graphics_flushBuffer(&g_sContext);
+
     	Task_sleep((UInt)arg0);
     }
 }
