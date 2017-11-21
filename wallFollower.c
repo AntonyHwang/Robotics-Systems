@@ -53,7 +53,7 @@ void calc_sensor_pid(int setPoint) {
     //r_f right wheel; r_b left wheel
     T = Clock_getTicks();
     deltaT = T - T_minus;
-    error = setPoint - r_f_side;
+    error = setPoint - r_corner;
     if (error >= -5 && error <= 5) {
         error = 0;
     }
@@ -81,24 +81,24 @@ void readSensor() {
 
 int checkRightSide(void)
 {
-    if (r_front >= 150 && l_front >= 150) {
-        if (r_f_side >= 240 && r_b_side >= 240) {
+    if (r_front >= 180 && l_front >= 180) {
+        if (r_corner >= 210 && r_b_side >= 100) {
             return 1; // Initial condition, detecting walls, go straight
         }
-        else if (r_f_side < 240 && r_b_side < 240){
+        else if (r_corner < 210 && r_b_side < 150){
             return 2; // walking along the wall, use PID
         }
-        else if (r_f_side >= 240 && r_b_side < 240) { // Angle detected, turn right smoothly.
+        else if (r_corner >= 210 && r_b_side < 150) { // Angle detected, turn right smoothly.
             return 3;
         }
-        else if (r_f_side < 240 && r_b_side >= 240) { // Turned around the angle, use PID
+        else if (r_corner < 210 && r_b_side >= 150) { // Turned around the angle, use PID
             return 4;
         }
     }
-    else if (r_front < 150 && l_front < 150) {
+    else if (r_front < 180 && l_front < 180) {
             return 5; // wall immediately in front, turn left sharply
     }
-    else if (r_front < 150 && l_front >= 150) { // In the midway of turning left
+    else if (r_front < 180 && l_front >= 180) { // In the midway of turning left
         if (r_corner > r_f_side) {
             return 6; // Use PID
         }

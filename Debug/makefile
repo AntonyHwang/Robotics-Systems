@@ -2,9 +2,7 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-SHELL = cmd.exe
-
-CG_TOOL_ROOT := C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS
+CG_TOOL_ROOT := /Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS
 
 GEN_OPTS__FLAG := --cmd_file="configPkg/compiler.opt"
 GEN_CMDS__FLAG := -l"configPkg/linker.cmd"
@@ -32,13 +30,13 @@ ORDERED_OBJS += \
 "./grlib/string.obj" \
 "../MSP_EXP432P401R.cmd" \
 $(GEN_CMDS__FLAG) \
--l"C:/ti/tirtos_msp43x_2_20_00_06/products/msp432_driverlib_3_21_00_05/driverlib/MSP432P4xx/ccs/msp432p4xx_driverlib.lib" \
+-l"/Applications/ti/tirtos_msp43x_2_20_00_06/products/msp432_driverlib_3_21_00_05/driverlib/MSP432P4xx/ccs/msp432p4xx_driverlib.lib" \
 -llibc.a \
 
 -include ../makefile.init
 
-RM := DEL /F
-RMDIR := RMDIR /S/Q
+RM := rm -rf
+RMDIR := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
@@ -165,13 +163,13 @@ all: CSRobot_01.out
 CSRobot_01.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM Linker'
-	"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=all --advice:power_severity=suppress --define=__MSP432P401R__ --define=TARGET_IS_MSP432P4XX --define=ccs --define=MSP432WARE -g --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi -z -m"CSRobot_01.map" --heap_size=1024 --stack_size=512 -i"C:/ti/ccsv7/ccs_base/arm/include" -i"C:/ti/ccsv7/ccs_base/arm/include" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/lib" -i"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="CSRobot_01_linkInfo.xml" --rom_model -o "CSRobot_01.out" $(ORDERED_OBJS)
+	"/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=FPv4SPD16 -me --advice:power=all --advice:power_severity=suppress --define=__MSP432P401R__ --define=TARGET_IS_MSP432P4XX --define=ccs --define=MSP432WARE -g --gcc --diag_warning=225 --diag_warning=255 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi -z -m"CSRobot_01.map" --heap_size=1024 --stack_size=512 -i"/Applications/ti/ccsv7/ccs_base/arm/include" -i"/Applications/ti/ccsv7/ccs_base/arm/include" -i"/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/lib" -i"/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="CSRobot_01_linkInfo.xml" --rom_model -o "CSRobot_01.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 CSRobot_01.hex: $(EXE_OUTPUTS)
 	@echo 'Invoking: ARM Hex Utility'
-	"C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/bin/armhex" --memwidth=8 --romwidth=8 -o "CSRobot_01.hex" $(EXE_OUTPUTS__QUOTED)
+	"/Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/bin/armhex" --memwidth=8 --romwidth=8 -o "CSRobot_01.hex" $(EXE_OUTPUTS__QUOTED)
 	@echo 'Finished building: $@'
 	@echo ' '
 
@@ -179,9 +177,9 @@ CSRobot_01.hex: $(EXE_OUTPUTS)
 clean:
 	-$(RM) $(GEN_CMDS__QUOTED)$(GEN_MISC_FILES__QUOTED)$(BIN_OUTPUTS__QUOTED)$(GEN_FILES__QUOTED)$(EXE_OUTPUTS__QUOTED)$(GEN_OPTS__QUOTED)
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
-	-$(RM) "MSP_EXP432P401R.obj" "buttons.obj" "deadReckon.obj" "heartBeatTask.obj" "main.obj" "motor.obj" "rangeRead.obj" "screenTask.obj" "wallFollower.obj" "LCDDriver\Sharp96x96.obj" "LCDDriver\Sharp96x96utils.obj" "fonts\fontcm20b.obj" "fonts\fontcm30b.obj" "fonts\fontcm40b.obj" "grlib\circle.obj" "grlib\context.obj" "grlib\image.obj" "grlib\line.obj" "grlib\rectangle.obj" "grlib\string.obj" 
-	-$(RM) "MSP_EXP432P401R.d" "buttons.d" "deadReckon.d" "heartBeatTask.d" "main.d" "motor.d" "rangeRead.d" "screenTask.d" "wallFollower.d" "LCDDriver\Sharp96x96.d" "LCDDriver\Sharp96x96utils.d" "fonts\fontcm20b.d" "fonts\fontcm30b.d" "fonts\fontcm40b.d" "grlib\circle.d" "grlib\context.d" "grlib\image.d" "grlib\line.d" "grlib\rectangle.d" "grlib\string.d" 
-	-$(RM) "LCDDriver\Sharp96x96utils.d" 
+	-$(RM) "MSP_EXP432P401R.obj" "buttons.obj" "deadReckon.obj" "heartBeatTask.obj" "main.obj" "motor.obj" "rangeRead.obj" "screenTask.obj" "wallFollower.obj" "LCDDriver/Sharp96x96.obj" "LCDDriver/Sharp96x96utils.obj" "fonts/fontcm20b.obj" "fonts/fontcm30b.obj" "fonts/fontcm40b.obj" "grlib/circle.obj" "grlib/context.obj" "grlib/image.obj" "grlib/line.obj" "grlib/rectangle.obj" "grlib/string.obj" 
+	-$(RM) "MSP_EXP432P401R.d" "buttons.d" "deadReckon.d" "heartBeatTask.d" "main.d" "motor.d" "rangeRead.d" "screenTask.d" "wallFollower.d" "LCDDriver/Sharp96x96.d" "LCDDriver/Sharp96x96utils.d" "fonts/fontcm20b.d" "fonts/fontcm30b.d" "fonts/fontcm40b.d" "grlib/circle.d" "grlib/context.d" "grlib/image.d" "grlib/line.d" "grlib/rectangle.d" "grlib/string.d" 
+	-$(RM) "LCDDriver/Sharp96x96utils.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

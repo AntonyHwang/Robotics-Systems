@@ -1,7 +1,7 @@
 ******************************************************************************
-                  TI ARM Linker PC v16.9.4                     
+                  TI ARM Linker Unix v16.9.4                   
 ******************************************************************************
->> Linked Tue Nov 21 20:03:58 2017
+>> Linked Tue Nov 21 20:56:34 2017
 
 OUTPUT FILE NAME:   <CSRobot_01.out>
 ENTRY POINT SYMBOL: "_c_int00"  address: 00008211
@@ -721,9 +721,6 @@ section   page    origin      length       input sections
 *          0    00000000    0000003c     
                   00000000    0000003c     Robot_pem4f.oem4f (.resetVecs)
 
-.vecs      0    20000000    00000140     UNINITIALIZED
-                  20000000    00000140     Robot_pem4f.oem4f (.vecs)
-
 .bss       0    20000140    00005654     UNINITIALIZED
                   20000140    00002ee0     (.common:DisplayBuffer)
                   20003020    00000e00     Robot_pem4f.oem4f (.bss:taskStackSection)
@@ -846,8 +843,11 @@ section   page    origin      length       input sections
 *          0    00000000    00000008     DSECT
                   00000000    00000008     boot.aem4f : boot.oem4f (.bootVecs)
 
-xdc.meta   0    00000000    000000fe     COPY SECTION
-                  00000000    000000fe     Robot_pem4f.oem4f (xdc.meta)
+.vecs      0    20000000    00000140     UNINITIALIZED
+                  20000000    00000140     Robot_pem4f.oem4f (.vecs)
+
+xdc.meta   0    00000000    000000ed     COPY SECTION
+                  00000000    000000ed     Robot_pem4f.oem4f (xdc.meta)
 
 .binit     0    00000000    00000000     
 
@@ -855,7 +855,7 @@ MODULE SUMMARY
 
        Module                     code    ro data   rw data
        ------                     ----    -------   -------
-    .\
+    ./
        main.obj                   398     0         4261   
        rangeRead.obj              1643    0         104    
        motor.obj                  1396    0         168    
@@ -867,74 +867,30 @@ MODULE SUMMARY
     +--+--------------------------+-------+---------+---------+
        Total:                     6061    248       5101   
                                                            
-    .\LCDDriver\
+    ./LCDDriver/
        Sharp96x96.obj             1578    76        12002  
        Sharp96x96utils.obj        98      0         0      
     +--+--------------------------+-------+---------+---------+
        Total:                     1676    76        12002  
                                                            
-    .\fonts\
+    ./fonts/
        fontcm20b.obj              0       2581      0      
     +--+--------------------------+-------+---------+---------+
        Total:                     0       2581      0      
                                                            
-    .\grlib\
+    ./grlib/
        string.obj                 1234    0         0      
        line.obj                   164     0         0      
        context.obj                74      0         0      
     +--+--------------------------+-------+---------+---------+
        Total:                     1472    0         0      
                                                            
-    C:\Users\Jingwen\Desktop\MRes Robotics\GX02-Control\robotic_systems\Debug\configPkg\package\cfg\
+    /Users/AntonyHwang/Desktop/working/robotic_systems/Debug/configPkg/package/cfg/
        Robot_pem4f.oem4f          1696    7615      6512   
     +--+--------------------------+-------+---------+---------+
        Total:                     1696    7615      6512   
                                                            
-    C:/ti/tirtos_msp43x_2_20_00_06/products/msp432_driverlib_3_21_00_05/driverlib/MSP432P4xx/ccs/msp432p4xx_driverlib.lib
-       pcm.o                      1214    0         0      
-       gpio.o                     480     0         48     
-       i2c.o                      330     0         0      
-       spi.o                      302     0         0      
-       timer_a.o                  284     0         0      
-       cs.o                       260     0         0      
-       flash.o                    156     0         0      
-       rtc_c.o                    72      0         0      
-       wdt_a.o                    44      0         0      
-       cpu.o                      28      0         0      
-    +--+--------------------------+-------+---------+---------+
-       Total:                     3170    0         48     
-                                                           
-    C:/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/drivers/lib/drivers_MSP432P401R.aem4f
-       I2CMSP432.oem4f            1378    32        0      
-       PowerMSP432.oem4f          1212    0         196    
-       PWMTimerMSP432.oem4f       1088    40        128    
-       GPIOMSP432.oem4f           700     12        49     
-       PWM.oem4f                  144     24        4      
-       I2C.oem4f                  130     16        4      
-       List.oem4f                 72      0         0      
-    +--+--------------------------+-------+---------+---------+
-       Total:                     4724    124       381    
-                                                           
-    C:/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/drivers/lib/power_tirtos_MSP432P401R.aem4f
-       PowerMSP432_tirtos.oem4f   106     0         0      
-    +--+--------------------------+-------+---------+---------+
-       Total:                     106     0         0      
-                                                           
-    C:/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/drivers/ports/lib/tirtosport.aem4f
-       SemaphoreP_tirtos.oem4f    146     0         0      
-       HwiP_tirtos.oem4f          138     0         0      
-    +--+--------------------------+-------+---------+---------+
-       Total:                     284     0         0      
-                                                           
-    C:\Users\Jingwen\Desktop\MRes Robotics\GX02-Control\robotic_systems\src\sysbios\sysbios.aem4f
-       BIOS.obj                   11562   0         0      
-       m3_Hwi_asm.obj             306     0         0      
-       m3_TaskSupport_asm.obj     180     0         0      
-       m3_Hwi_asm_switch.obj      118     0         0      
-    +--+--------------------------+-------+---------+---------+
-       Total:                     12166   0         0      
-                                                           
-    C:\ti\ccsv7\tools\compiler\ti-cgt-arm_16.9.4.LTS\lib\rtsv7M4_T_le_v4SPD16_eabi.lib
+    /Applications/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/lib/rtsv7M4_T_le_v4SPD16_eabi.lib
        _printfi.obj               4414    0         0      
        ull_div_t2.obj             500     0         0      
        fd_add_t2.obj              438     0         0      
@@ -974,17 +930,17 @@ MODULE SUMMARY
     +--+--------------------------+-------+---------+---------+
        Total:                     8034    257       324    
                                                            
-    C:\ti\tirtos_msp43x_2_20_00_06\products\bios_6_46_00_23\packages\ti\targets\arm\rtsarm\lib\auto_init.aem4f
+    /Applications/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/targets/arm/rtsarm/lib/auto_init.aem4f
        auto_init.oem4f            160     0         0      
     +--+--------------------------+-------+---------+---------+
        Total:                     160     0         0      
                                                            
-    C:\ti\tirtos_msp43x_2_20_00_06\products\bios_6_46_00_23\packages\ti\targets\arm\rtsarm\lib\boot.aem4f
+    /Applications/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/targets/arm/rtsarm/lib/boot.aem4f
        boot.oem4f                 88      0         0      
     +--+--------------------------+-------+---------+---------+
        Total:                     88      0         0      
                                                            
-    C:\ti\tirtos_msp43x_2_20_00_06\products\bios_6_46_00_23\packages\ti\targets\arm\rtsarm\lib\ti.targets.arm.rtsarm.aem4f
+    /Applications/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/targets/arm/rtsarm/lib/ti.targets.arm.rtsarm.aem4f
        System.oem4f               1255    0         0      
        Text.oem4f                 672     0         0      
        Error.oem4f                524     0         0      
@@ -1000,6 +956,50 @@ MODULE SUMMARY
        Gate.oem4f                 28      0         0      
     +--+--------------------------+-------+---------+---------+
        Total:                     4043    0         0      
+                                                           
+    /Applications/ti/tirtos_msp43x_2_20_00_06/products/msp432_driverlib_3_21_00_05/driverlib/MSP432P4xx/ccs/msp432p4xx_driverlib.lib
+       pcm.o                      1214    0         0      
+       gpio.o                     480     0         48     
+       i2c.o                      330     0         0      
+       spi.o                      302     0         0      
+       timer_a.o                  284     0         0      
+       cs.o                       260     0         0      
+       flash.o                    156     0         0      
+       rtc_c.o                    72      0         0      
+       wdt_a.o                    44      0         0      
+       cpu.o                      28      0         0      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     3170    0         48     
+                                                           
+    /Applications/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/drivers/lib/drivers_MSP432P401R.aem4f
+       I2CMSP432.oem4f            1378    32        0      
+       PowerMSP432.oem4f          1212    0         196    
+       PWMTimerMSP432.oem4f       1088    40        128    
+       GPIOMSP432.oem4f           700     12        49     
+       PWM.oem4f                  144     24        4      
+       I2C.oem4f                  130     16        4      
+       List.oem4f                 72      0         0      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     4724    124       381    
+                                                           
+    /Applications/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/drivers/lib/power_tirtos_MSP432P401R.aem4f
+       PowerMSP432_tirtos.oem4f   106     0         0      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     106     0         0      
+                                                           
+    /Applications/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/drivers/ports/lib/tirtosport.aem4f
+       SemaphoreP_tirtos.oem4f    146     0         0      
+       HwiP_tirtos.oem4f          138     0         0      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     284     0         0      
+                                                           
+    /Users/AntonyHwang/Desktop/working/robotic_systems/src/sysbios/sysbios.aem4f
+       BIOS.obj                   11562   0         0      
+       m3_Hwi_asm.obj             306     0         0      
+       m3_TaskSupport_asm.obj     180     0         0      
+       m3_Hwi_asm_switch.obj      118     0         0      
+    +--+--------------------------+-------+---------+---------+
+       Total:                     12166   0         0      
                                                            
        Stack:                     0       0         768    
        Linker Generated:          0       811       0      
@@ -1196,11 +1196,11 @@ UNDEFED   SHT$$INIT_ARRAY$$Limit
 0000a621  WDT_A_startTimer                                            
 00000000  __ASM__                                                     
 20005360  __CIOBUF_                                                   
-0000007a  __ISA__                                                     
-0000008d  __PLAT__                                                    
+00000069  __ISA__                                                     
+0000007c  __PLAT__                                                    
 20010000  __STACK_END                                                 
 00000300  __STACK_SIZE                                                
-000000b0  __TARG__                                                    
+0000009f  __TARG__                                                    
 0000d920  __TI_CINIT_Base                                             
 0000d938  __TI_CINIT_Limit                                            
 0000d900  __TI_Handler_Table_Base                                     
@@ -1219,7 +1219,7 @@ ffffffff  __TI_prof_data_start
 0000d608  __TI_static_base__                                          
 00007ba5  __TI_writemsg                                               
 0000a9a5  __TI_zero_init                                              
-000000d6  __TRDR__                                                    
+000000c5  __TRDR__                                                    
 00007179  __aeabi_cdcmpeq                                             
 00007179  __aeabi_cdcmple                                             
 000071ff  __aeabi_cdrcmple                                            
@@ -1830,10 +1830,10 @@ address   name
 00000000  ti_sysbios_family_arm_m3_Hwi_resetVectors                   
 00000001  xdc_runtime_Startup__EXECFXN__C                             
 00000001  xdc_runtime_Startup__RESETFXN__C                            
-0000007a  __ISA__                                                     
-0000008d  __PLAT__                                                    
-000000b0  __TARG__                                                    
-000000d6  __TRDR__                                                    
+00000069  __ISA__                                                     
+0000007c  __PLAT__                                                    
+0000009f  __TARG__                                                    
+000000c5  __TRDR__                                                    
 00000300  __STACK_SIZE                                                
 00000885  __TI_printfi                                                
 0000117f  PowerMSP432_initPolicy                                      

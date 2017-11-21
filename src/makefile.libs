@@ -1,6 +1,6 @@
 #
 # This file was generated based on the configuration script:
-#     C:\Users\Jingwen\Desktop\MRes Robotics\GX02-Control\robotic_systems\Robot.cfg
+#     /Users/AntonyHwang/Desktop/working/robotic_systems/Robot.cfg
 #
 # This makefile may be included in other makefiles that need to build
 # the libraries containing the compiled source files generated as
@@ -14,7 +14,7 @@
 #
 # The absolute path to the generated source directory (at the time the
 # sources were generated) is:
-#    C:\Users\Jingwen\Desktop\MRes Robotics\GX02-Control\robotic_systems\src
+#    /Users/AntonyHwang/Desktop/working/robotic_systems/src
 #
 GEN_SRC_DIR ?= ../src
 
