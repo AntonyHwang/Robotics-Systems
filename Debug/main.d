@@ -166,6 +166,7 @@ main.obj: ../buttons.h
 main.obj: ../motor.h
 main.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/drivers/PWM.h
 main.obj: ../wallFollower.h
+main.obj: ../deadReckon.h
 main.obj: ../robot.h
 main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdio.h
 main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/linkage.h
@@ -337,6 +338,7 @@ C:/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/
 ../motor.h: 
 C:/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/drivers/PWM.h: 
 ../wallFollower.h: 
+../deadReckon.h: 
 ../robot.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdio.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/linkage.h: 

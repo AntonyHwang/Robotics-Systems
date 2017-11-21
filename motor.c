@@ -164,7 +164,7 @@ void stop() {
 
 void MoveStraight(UArg arg0, UArg arg1)
 {
-    //Task_sleep(2000);
+    Task_sleep(2000);
     init_motors();
     /* Loop forever incrementing the PWM duty */
     preT = Clock_getTicks();

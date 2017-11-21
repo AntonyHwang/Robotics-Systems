@@ -17,6 +17,7 @@
 #include "buttons.h"
 #include "motor.h"
 #include "wallFollower.h"
+#include "deadReckon.h"
 #include "robot.h"
 #include <stdio.h>
 #define TASKSTACKSIZE       2048
@@ -27,6 +28,10 @@ Task_Handle task;
 Task_Struct task1Struct;
 Char task1Stack[TASKSTACKSIZE];
 Task_Handle task1;
+
+Task_Struct task2Struct;
+Char task2Stack[TASKSTACKSIZE];
+Task_Handle task2;
 
 
 /*
@@ -43,7 +48,7 @@ int main(void)
     Board_initGPIO();
     Board_initPWM();
     Board_initI2C();
-    Task_Params taskParams, taskParams1;
+    Task_Params taskParams, taskParams1, taskParams2;
 
     GPIO_setCallback(Board_BUTTON0, gpioButtonFxn0);
     GPIO_enableInt(Board_BUTTON0);
@@ -65,13 +70,19 @@ int main(void)
     taskParams.stack = &task0Stack;
     Task_construct(&task0Struct, (Task_FuncPtr)MoveStraight, &taskParams, NULL);
 
-    Task_Params_init(&taskParams1);
+    /*Task_Params_init(&taskParams1);
     taskParams.stackSize = TASKSTACKSIZE;
     taskParams.stack = &task1Stack;
-    Task_construct(&task1Struct, (Task_FuncPtr)wallFollow, &taskParams, NULL);
+    Task_construct(&task1Struct, (Task_FuncPtr)wallFollow, &taskParams, NULL);*/
+
+    Task_Params_init(&taskParams2);
+    taskParams.stackSize = TASKSTACKSIZE;
+    taskParams.stack = &task2Stack;
+    Task_construct(&task2Struct, (Task_FuncPtr)deadReckonFxn, &taskParams, NULL);
 
     task = Task_handle(&task0Struct);
     //task1 = Task_handle(&task1Struct);
+    task2 = Task_handle(&task2Struct);
 
     // Switch on the LEDs
     //
