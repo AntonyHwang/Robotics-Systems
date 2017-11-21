@@ -81,24 +81,25 @@ void readSensor() {
 
 int checkRightSide(void)
 {
-    if (r_front >= 180 && l_front >= 180) {
-        if (r_corner >= 210 && r_b_side >= 100) {
+    if (r_front >= 150 && l_front >= 150) {
+        if (r_f_side >= 240 && r_b_side >= 240) {
             return 1; // Initial condition, detecting walls, go straight
         }
-        else if (r_corner < 210 && r_b_side < 150){
-            return 2; // walking along the wall, use PID
+        else if (r_f_side >= 240 && r_b_side < 240) { // Angle detected, turn right smoothly.
+            return 2;
         }
-        else if (r_corner >= 210 && r_b_side < 150) { // Angle detected, turn right smoothly.
-            return 3;
+        else if (r_f_side < 240 && r_b_side < 240){
+            return 3; // walking along the wall, use PID
         }
-        else if (r_corner < 210 && r_b_side >= 150) { // Turned around the angle, use PID
+
+        else if (r_f_side < 240 && r_b_side >= 240) { // Turned around the angle, use PID
             return 4;
         }
     }
-    else if (r_front < 180 && l_front < 180) {
+    else if (r_front < 150 && l_front < 150) {
             return 5; // wall immediately in front, turn left sharply
     }
-    else if (r_front < 180 && l_front >= 180) { // In the midway of turning left
+    else if (r_front < 150 && l_front >= 150) { // In the midway of turning left
         if (r_corner > r_f_side) {
             return 6; // Use PID
         }
@@ -120,19 +121,19 @@ void wallFollow(UArg arg0, UArg arg1) {
     while(1) {
         readSensor();
         mode = checkRightSide();
-        if (mode == 1 || mode == 4) {
+        if (mode == 1) {
             setPointR = base_speed;
             setPointL = base_speed;
             dirR = 1;
             dirL = 1;
         }
         else if (mode == 5 || mode == 7){
-            setPointR = base_speed / 3;
-            setPointL = base_speed / 3;
+            setPointR = 0.4 * base_speed;
+            setPointL = 0.4 * base_speed;
             dirR = 1;
             dirL = 2;
         }
-        else if (mode == 2 || mode == 4 || mode == 6) {
+        else if (mode == 3 || mode == 4 || mode == 6) {
             calc_sensor_pid(wallDist);
             if (PID_val > 0) {
                 setPointR = base_speed + PID_val;
@@ -152,15 +153,15 @@ void wallFollow(UArg arg0, UArg arg1) {
             dirR = 1;
             dirL = 1;
         }
-        else if (mode == 3) {
-            setPointR = 0;
-            setPointL = base_speed / 2;
+        else if (mode == 2) {
+            setPointR = 0.25 * base_speed;
+            setPointL = 0.75 * base_speed;
             dirR = 2;
             dirL = 1;
         }
         else {
-            setPointR = base_speed;
-            setPointL = base_speed;
+            setPointR = base_speed / 2;
+            setPointL = base_speed / 2;
             dirR = 1;
             dirL = 1;
         }

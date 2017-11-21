@@ -2,6 +2,8 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
+SHELL = cmd.exe
+
 # Add inputs and outputs from these tool invocations to the build variables 
 CFG_SRCS += \
 ../Robot.cfg 
@@ -56,7 +58,7 @@ OBJS += \
 ./wallFollower.obj 
 
 GEN_MISC_DIRS__QUOTED += \
-"configPkg/" 
+"configPkg\" 
 
 OBJS__QUOTED += \
 "MSP_EXP432P401R.obj" \
@@ -81,8 +83,8 @@ C_DEPS__QUOTED += \
 "wallFollower.d" 
 
 GEN_FILES__QUOTED += \
-"configPkg/linker.cmd" \
-"configPkg/compiler.opt" 
+"configPkg\linker.cmd" \
+"configPkg\compiler.opt" 
 
 C_SRCS__QUOTED += \
 "../MSP_EXP432P401R.c" \
