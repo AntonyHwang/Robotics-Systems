@@ -16,8 +16,18 @@
 #include "Board.h"
 #include "buttons.h"
 #include "motor.h"
+#include "wallFollower.h"
 #include "robot.h"
 #include <stdio.h>
+#define TASKSTACKSIZE       2048
+Task_Struct task0Struct;
+Char task0Stack[TASKSTACKSIZE];
+Task_Handle task;
+
+Task_Struct task1Struct;
+Char task1Stack[TASKSTACKSIZE];
+Task_Handle task1;
+
 
 /*
  *  ======== global system state variables ========
@@ -33,6 +43,7 @@ int main(void)
     Board_initGPIO();
     Board_initPWM();
     Board_initI2C();
+    Task_Params taskParams, taskParams1;
 
     GPIO_setCallback(Board_BUTTON0, gpioButtonFxn0);
     GPIO_enableInt(Board_BUTTON0);
@@ -48,6 +59,20 @@ int main(void)
     GPIO_enableInt(Robot_MotorRIN1f);
     GPIO_setCallback(Robot_MotorLIN1f, LHMotorChannelAFallingFxn);
     GPIO_enableInt(Robot_MotorLIN1f);
+
+    Task_Params_init(&taskParams);
+    taskParams.stackSize = TASKSTACKSIZE;
+    taskParams.stack = &task0Stack;
+    Task_construct(&task0Struct, (Task_FuncPtr)MoveStraight, &taskParams, NULL);
+
+    Task_Params_init(&taskParams1);
+    taskParams.stackSize = TASKSTACKSIZE;
+    taskParams.stack = &task1Stack;
+    Task_construct(&task1Struct, (Task_FuncPtr)wallFollow, &taskParams, NULL);
+
+    task = Task_handle(&task0Struct);
+    //task1 = Task_handle(&task1Struct);
+
     // Switch on the LEDs
     //
     //GPIO_write(Board_LED0, Board_LED_ON);	// LH LED

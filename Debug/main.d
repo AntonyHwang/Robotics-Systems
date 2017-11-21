@@ -128,7 +128,6 @@ main.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sy
 main.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task__epilogue.h
 main.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/package/Task_SupportProxy.h
 main.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h
-main.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h
 main.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/System.h
 main.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h
 main.obj: C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h
@@ -166,6 +165,7 @@ main.obj: ../MSP_EXP432P401R.h
 main.obj: ../buttons.h
 main.obj: ../motor.h
 main.obj: C:/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/drivers/PWM.h
+main.obj: ../wallFollower.h
 main.obj: ../robot.h
 main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdio.h
 main.obj: C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/linkage.h
@@ -299,7 +299,6 @@ C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/inte
 C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task__epilogue.h: 
 C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/package/Task_SupportProxy.h: 
 C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h: 
-C:/ti/tirtos_msp43x_2_20_00_06/products/bios_6_46_00_23/packages/ti/sysbios/knl/Task.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/System.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/Types.h: 
 C:/ti/xdctools_3_32_00_06_core/packages/xdc/runtime/IModule.h: 
@@ -337,6 +336,7 @@ C:/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/
 ../buttons.h: 
 ../motor.h: 
 C:/ti/tirtos_msp43x_2_20_00_06/products/tidrivers_msp43x_2_20_00_08/packages/ti/drivers/PWM.h: 
+../wallFollower.h: 
 ../robot.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/stdio.h: 
 C:/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.4.LTS/include/linkage.h: 

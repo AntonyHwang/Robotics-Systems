@@ -155,6 +155,13 @@ void setMotorL(int dutyL, int dir) {
     }
 }
 
+void stop() {
+    PWM_setDuty(pwm1, pwmPeriod);
+    PWM_setDuty(pwm2, pwmPeriod);
+    PWM_setDuty(pwm3, pwmPeriod);
+    PWM_setDuty(pwm4, pwmPeriod);
+}
+
 void MoveStraight(UArg arg0, UArg arg1)
 {
     //Task_sleep(2000);

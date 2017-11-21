@@ -29,7 +29,7 @@ int wallDist = 100;
 int r_corner, l_corner, r_front, l_front, r_f_side, l_f_side, r_b_side, l_b_side;
 float PID_val;
 //float b_PID_val;
-float base_speed = 10.0;
+float base_speed = 8.0;
 extern float setPointR, setPointL;
 extern int dirR;
 extern int dirL;
@@ -37,9 +37,9 @@ extern int dirL;
 int wall_dist = 150;
 int T, T_minus, deltaT;
 
-float P = 0.20;
-float I = 0.04;
-float D = 0.07;
+float P = 0.05;
+float I = 0.004;
+float D = 0.01;
 float integ;
 float b_integ;
 float last_error;
@@ -83,17 +83,28 @@ int checkRightSide(void)
 {
     if (r_front >= 150 && l_front >= 150) {
         if (r_f_side >= 240 && r_b_side >= 240) {
-            return 1; // Initial condition, detecting walls
+            return 1; // Initial condition, detecting walls, go straight
+        }
+        else if (r_f_side < 240 && r_b_side < 240){
+            return 2; // walking along the wall, use PID
+        }
+        else if (r_f_side >= 240 && r_b_side < 240) { // Angle detected, turn right smoothly.
+            return 3;
+        }
+        else if (r_f_side < 240 && r_b_side >= 240) { // Turned around the angle, use PID
+            return 4;
+        }
+    }
+    else if (r_front < 150 && l_front < 150) {
+            return 5; // wall immediately in front, turn left sharply
+    }
+    else if (r_front < 150 && l_front >= 150) { // In the midway of turning left
+        if (r_corner > r_f_side) {
+            return 6; // Use PID
         }
         else {
-            return 3; // walking along the wall, use PID
+            return 7; // Turn left
         }
-    }
-    else if (r_front < 150 || l_front < 150) {
-            return 2; // wall immediately in front, turn left
-    }
-    else {
-        return 4;
     }
 }
 
@@ -105,31 +116,46 @@ void wallFollow(UArg arg0, UArg arg1) {
     T_minus = Clock_getTicks();
     last_error = 0;
     last_error = 0;
+    int mode;
     while(1) {
         readSensor();
-        if (checkRightSide() == 1) {
+        mode = checkRightSide();
+        if (mode == 1 || mode == 4) {
             setPointR = base_speed;
             setPointL = base_speed;
             dirR = 1;
             dirL = 1;
         }
-        else if (checkRightSide() == 2){
+        else if (mode == 5 || mode == 7){
             setPointR = base_speed / 3;
             setPointL = base_speed / 3;
             dirR = 1;
             dirL = 2;
         }
-        else if (checkRightSide() == 3) {
+        else if (mode == 2 || mode == 4 || mode == 6) {
             calc_sensor_pid(wallDist);
-            setPointR = base_speed + PID_val;
-            setPointL = base_speed;
-            if (setPointR < 0) {
-                setPointR = 0;
+            if (PID_val > 0) {
+                setPointR = base_speed + PID_val;
+                setPointL = base_speed;
             }
+            else {
+                setPointR = base_speed;
+                setPointL = base_speed - PID_val;
+            }
+
             if (setPointR > 2 * base_speed) {
                 setPointR = 2 * base_speed;
             }
+            if (setPointL > 2 * base_speed) {
+                setPointL = 2 * base_speed;
+            }
             dirR = 1;
+            dirL = 1;
+        }
+        else if (mode == 3) {
+            setPointR = 0;
+            setPointL = base_speed / 2;
+            dirR = 2;
             dirL = 1;
         }
         else {
@@ -139,6 +165,6 @@ void wallFollow(UArg arg0, UArg arg1) {
             dirL = 1;
         }
         //difference between current distance and target distance
-        Task_sleep(200);
+        Task_sleep(100);
     }
 }

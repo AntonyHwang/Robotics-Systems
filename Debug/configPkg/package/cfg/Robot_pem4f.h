@@ -8,13 +8,10 @@
 #include <xdc/std.h>
 
 #include <ti/sysbios/knl/Task.h>
-extern const ti_sysbios_knl_Task_Handle heartBeatTask;
-
-#include <ti/sysbios/knl/Task.h>
 extern const ti_sysbios_knl_Task_Handle rangeRead;
 
 #include <ti/sysbios/knl/Task.h>
-extern const ti_sysbios_knl_Task_Handle motor;
+extern const ti_sysbios_knl_Task_Handle screenTask;
 
 extern int xdc_runtime_Startup__EXECFXN__C;
 

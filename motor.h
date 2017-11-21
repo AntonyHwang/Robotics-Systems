@@ -13,6 +13,7 @@
 void RHMotorChannelAFallingFxn();
 void LHMotorChannelAFallingFxn();
 void speedPID(float setPointR, float setPointL);
+void MoveStraight(UArg arg0, UArg arg1);
 extern PWM_Handle pwm1;
 extern PWM_Handle pwm2;
 extern PWM_Handle pwm3;
@@ -26,6 +27,7 @@ extern uint32_t preT, currT, dT;
 extern float preRotatesR, currRotatesR, preRotatesL, currRotatesL;
 extern float setPoint, errR, errL, integR, integL;
 extern float diffR, diffL, prev_errR, prev_errL;
+extern float K;
 
 extern uint8_t distR[4];
 extern uint8_t distL[4];

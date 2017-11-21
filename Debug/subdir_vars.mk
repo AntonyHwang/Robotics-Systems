@@ -14,6 +14,7 @@ CMD_SRCS += \
 C_SRCS += \
 ../MSP_EXP432P401R.c \
 ../buttons.c \
+../deadReckon.c \
 ../heartBeatTask.c \
 ../main.c \
 ../motor.c \
@@ -34,6 +35,7 @@ GEN_MISC_DIRS += \
 C_DEPS += \
 ./MSP_EXP432P401R.d \
 ./buttons.d \
+./deadReckon.d \
 ./heartBeatTask.d \
 ./main.d \
 ./motor.d \
@@ -47,6 +49,7 @@ GEN_OPTS += \
 OBJS += \
 ./MSP_EXP432P401R.obj \
 ./buttons.obj \
+./deadReckon.obj \
 ./heartBeatTask.obj \
 ./main.obj \
 ./motor.obj \
@@ -60,6 +63,7 @@ GEN_MISC_DIRS__QUOTED += \
 OBJS__QUOTED += \
 "MSP_EXP432P401R.obj" \
 "buttons.obj" \
+"deadReckon.obj" \
 "heartBeatTask.obj" \
 "main.obj" \
 "motor.obj" \
@@ -70,6 +74,7 @@ OBJS__QUOTED += \
 C_DEPS__QUOTED += \
 "MSP_EXP432P401R.d" \
 "buttons.d" \
+"deadReckon.d" \
 "heartBeatTask.d" \
 "main.d" \
 "motor.d" \
@@ -84,6 +89,7 @@ GEN_FILES__QUOTED += \
 C_SRCS__QUOTED += \
 "../MSP_EXP432P401R.c" \
 "../buttons.c" \
+"../deadReckon.c" \
 "../heartBeatTask.c" \
 "../main.c" \
 "../motor.c" \

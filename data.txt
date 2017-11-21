@@ -1,3 +1,5 @@
+CS_DAP_0: Error connecting to the target: (Error -617 @ 0x0) The device ID read during the SWD connect sequence is invalid.  The device may not be supported, or the connection to the target  may be unreliable. Try lowering the TCLK setting before trying again. (Emulation package 7.0.48.0) 
+CS_DAP_0: Error connecting to the target: (Error -617 @ 0x0) The device ID read during the SWD connect sequence is invalid.  The device may not be supported, or the connection to the target  may be unreliable. Try lowering the TCLK setting before trying again. (Emulation package 7.0.48.0) 
 CORTEX_M4_0: GEL Output: Memory Map Initialization Complete
 CORTEX_M4_0: GEL Output: Halting Watchdog Timer
 CORTEX_M4_0: WARNING   : On MSP432P401R hitting a breakpoint cannot be detected by the debugger when the device is in low power mode.
