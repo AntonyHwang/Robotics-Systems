@@ -70,19 +70,19 @@ int main(void)
     taskParams.stack = &task0Stack;
     Task_construct(&task0Struct, (Task_FuncPtr)MoveStraight, &taskParams, NULL);
 
-    /*Task_Params_init(&taskParams1);
+    Task_Params_init(&taskParams1);
     taskParams.stackSize = TASKSTACKSIZE;
     taskParams.stack = &task1Stack;
-    Task_construct(&task1Struct, (Task_FuncPtr)wallFollow, &taskParams, NULL);*/
+    Task_construct(&task1Struct, (Task_FuncPtr)wallFollow, &taskParams, NULL);
 
-    Task_Params_init(&taskParams2);
+    /*Task_Params_init(&taskParams2);
     taskParams.stackSize = TASKSTACKSIZE;
     taskParams.stack = &task2Stack;
-    Task_construct(&task2Struct, (Task_FuncPtr)deadReckonFxn, &taskParams, NULL);
+    Task_construct(&task2Struct, (Task_FuncPtr)deadReckonFxn, &taskParams, NULL);*/
 
     task = Task_handle(&task0Struct);
-    //task1 = Task_handle(&task1Struct);
-    task2 = Task_handle(&task2Struct);
+    task1 = Task_handle(&task1Struct);
+    //task2 = Task_handle(&task2Struct);
 
     // Switch on the LEDs
     //
